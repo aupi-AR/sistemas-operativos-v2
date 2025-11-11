@@ -1,4 +1,0 @@
-([('interfaz_gui',
-   '/Users/aldanabiondi/Documents/Pablo '
-   'Donato/TULIAN/projectoSOac/dist/interfaz_gui',
-   'EXECUTABLE')],)
