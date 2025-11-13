@@ -11,8 +11,6 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import sys
 import os
-import os
-import sys
 import atexit
 
 
@@ -37,13 +35,27 @@ class MemorySimulatorGUI:
         self.json_data = None
         self.lista_procesos = []
         
+        # Variables para navegación interactiva del gráfico
+        self.pan_active = False
+        self.press_event = None
+        
         # Configurar estilo
         style = ttk.Style()
         style.theme_use('clam')
         
         self.crear_interfaz()
     
+    def validar_solo_enteros(self, texto):
+        """Valida que solo se ingresen números enteros (sin punto ni coma)"""
+        if texto == "":
+            return True
+        # Permite solo dígitos (sin punto ni coma)
+        return texto.isdigit()
+    
     def crear_interfaz(self):
+        # Registrar la función de validación
+        vcmd = (self.root.register(self.validar_solo_enteros), '%P')
+        
         # Frame principal
         main_frame = ttk.Frame(self.root, padding="20")
         main_frame.pack(fill=tk.BOTH, expand=True)
@@ -62,7 +74,8 @@ class MemorySimulatorGUI:
         ttk.Label(config_frame, text="Tamaño de Memoria:").grid(row=0, column=0, 
                                                                 sticky=tk.W, pady=5)
         self.tamano_var = tk.IntVar(value=500)
-        tamano_entry = ttk.Entry(config_frame, textvariable=self.tamano_var, width=15)
+        tamano_entry = ttk.Entry(config_frame, textvariable=self.tamano_var, width=15,
+                                validate='key', validatecommand=vcmd)
         tamano_entry.grid(row=0, column=1, padx=10, pady=5)
         tamano_entry.bind('<FocusOut>', lambda e: self.validar_positivo(self.tamano_var))
         
@@ -79,7 +92,8 @@ class MemorySimulatorGUI:
         ttk.Label(config_frame, text="Tiempo de Selección:").grid(row=1, column=0, 
                                                                   sticky=tk.W, pady=5)
         self.tiempo_sel_var = tk.IntVar(value=1)
-        tiempo_sel_entry = ttk.Entry(config_frame, textvariable=self.tiempo_sel_var, width=15)
+        tiempo_sel_entry = ttk.Entry(config_frame, textvariable=self.tiempo_sel_var, width=15,
+                                     validate='key', validatecommand=vcmd)
         tiempo_sel_entry.grid(row=1, column=1, padx=10, pady=5)
         tiempo_sel_entry.bind('<FocusOut>', lambda e: self.validar_no_negativo(self.tiempo_sel_var))
         
@@ -87,7 +101,8 @@ class MemorySimulatorGUI:
         ttk.Label(config_frame, text="Promedio de Carga:").grid(row=1, column=2, 
                                                                 sticky=tk.W, pady=5, padx=(20, 0))
         self.promedio_carga_var = tk.IntVar(value=1)
-        promedio_entry = ttk.Entry(config_frame, textvariable=self.promedio_carga_var, width=12)
+        promedio_entry = ttk.Entry(config_frame, textvariable=self.promedio_carga_var, width=12,
+                                   validate='key', validatecommand=vcmd)
         promedio_entry.grid(row=1, column=3, padx=10, pady=5)
         promedio_entry.bind('<FocusOut>', lambda e: self.validar_no_negativo(self.promedio_carga_var))
         
@@ -95,7 +110,8 @@ class MemorySimulatorGUI:
         ttk.Label(config_frame, text="Tiempo de Liberación:").grid(row=2, column=0, 
                                                                    sticky=tk.W, pady=5)
         self.tiempo_lib_var = tk.IntVar(value=1)
-        tiempo_lib_entry = ttk.Entry(config_frame, textvariable=self.tiempo_lib_var, width=15)
+        tiempo_lib_entry = ttk.Entry(config_frame, textvariable=self.tiempo_lib_var, width=15,
+                                     validate='key', validatecommand=vcmd)
         tiempo_lib_entry.grid(row=2, column=1, padx=10, pady=5)
         tiempo_lib_entry.bind('<FocusOut>', lambda e: self.validar_no_negativo(self.tiempo_lib_var))
         
@@ -131,7 +147,7 @@ class MemorySimulatorGUI:
         self.info_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         scrollbar.config(command=self.info_text.yview)
         
-        # NUEVO: Frame de resultados
+     
         self.resultados_frame = ttk.LabelFrame(main_frame, text="Resultados de la Simulación", 
                                                padding="15")
         self.resultados_frame.pack(fill=tk.X, pady=(0, 15))
@@ -339,7 +355,7 @@ class MemorySimulatorGUI:
             simulacion.simulacion()
             print("Simulación completada!\n")
             
-            # NUEVO: Mostrar fragmentación en la interfaz
+            
             self.fragmentacion_label.config(
                 text=f"{simulacion.fragmentacion} unidades",
                 foreground='darkgreen'
@@ -373,6 +389,89 @@ class MemorySimulatorGUI:
             
             for inicio, duracion, tipo in p.evento:
                 print(f"  Evento: {tipo:12} | Inicio: {inicio:3} | Fin: {inicio+duracion:3} | Duración: {duracion}")
+    
+    def configurar_navegacion_interactiva(self, fig, ax):
+        """Configura la navegación interactiva del gráfico Gantt"""
+        
+        def on_scroll(event):
+            """Zoom con la ruedita del ratón"""
+            if event.inaxes != ax:
+                return
+            
+            # Factor de zoom
+            base_scale = 1.2
+            
+            # Obtener límites actuales
+            cur_xlim = ax.get_xlim()
+            cur_ylim = ax.get_ylim()
+            
+            # Obtener posición del cursor
+            xdata = event.xdata
+            ydata = event.ydata
+            
+            if event.button == 'up':
+                # Zoom in
+                scale_factor = 1 / base_scale
+            elif event.button == 'down':
+                # Zoom out
+                scale_factor = base_scale
+            else:
+                return
+            
+            # Calcular nuevos límites
+            new_width = (cur_xlim[1] - cur_xlim[0]) * scale_factor
+            new_height = (cur_ylim[1] - cur_ylim[0]) * scale_factor
+            
+            # Centrar el zoom en la posición del cursor
+            relx = (cur_xlim[1] - xdata) / (cur_xlim[1] - cur_xlim[0])
+            rely = (cur_ylim[1] - ydata) / (cur_ylim[1] - cur_ylim[0])
+            
+            ax.set_xlim([xdata - new_width * (1 - relx), xdata + new_width * relx])
+            ax.set_ylim([ydata - new_height * (1 - rely), ydata + new_height * rely])
+            
+            fig.canvas.draw_idle()
+        
+        def on_press(event):
+            """Inicia el arrastre con click izquierdo"""
+            if event.inaxes != ax:
+                return
+            if event.button == 1:  # Click izquierdo
+                self.pan_active = True
+                self.press_event = event
+                fig.canvas.set_cursor(1)  # Cursor de mano
+        
+        def on_release(event):
+            """Termina el arrastre"""
+            self.pan_active = False
+            self.press_event = None
+            fig.canvas.set_cursor(0)  # Cursor normal
+        
+        def on_motion(event):
+            """Arrastra el gráfico"""
+            if not self.pan_active or self.press_event is None:
+                return
+            if event.inaxes != ax:
+                return
+            
+            # Calcular el desplazamiento
+            dx = event.xdata - self.press_event.xdata
+            dy = event.ydata - self.press_event.ydata
+            
+            # Obtener límites actuales
+            cur_xlim = ax.get_xlim()
+            cur_ylim = ax.get_ylim()
+            
+            # Aplicar desplazamiento
+            ax.set_xlim(cur_xlim[0] - dx, cur_xlim[1] - dx)
+            ax.set_ylim(cur_ylim[0] - dy, cur_ylim[1] - dy)
+            
+            fig.canvas.draw_idle()
+        
+        # Conectar eventos
+        fig.canvas.mpl_connect('scroll_event', on_scroll)
+        fig.canvas.mpl_connect('button_press_event', on_press)
+        fig.canvas.mpl_connect('button_release_event', on_release)
+        fig.canvas.mpl_connect('motion_notify_event', on_motion)
     
     def generar_gantt(self, simulacion):
         lista_procesos_terminados = simulacion.procesosTerminados
@@ -427,7 +526,7 @@ class MemorySimulatorGUI:
         
         ax.set_xlabel("Tiempo")
         ax.set_ylabel("Tamaño de Memoria")
-        ax.set_title("Diagrama de Gantt - Uso de Memoria vs. Tiempo")
+        ax.set_title("Diagrama de Gantt - Uso de Memoria vs. Tiempo\n(Usa la ruedita para zoom y arrastra para mover)")
         
         total_memoria = simulacion.tamano
         max_time = max(g[2] for g in gantt)
@@ -441,6 +540,9 @@ class MemorySimulatorGUI:
         labels = list(colores_eventos.keys())
         ax.legend(handles, labels, title="Eventos en Memoria", 
                  bbox_to_anchor=(1.02, 1), loc='upper left')
+        
+        # HABILITAR NAVEGACIÓN INTERACTIVA
+        self.configurar_navegacion_interactiva(fig, ax)
         
         plt.tight_layout()
         plt.show()

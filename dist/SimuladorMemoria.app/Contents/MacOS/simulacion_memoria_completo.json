@@ -1,0 +1,1577 @@
+{
+  "eventos": [
+    {
+      "tiempo": 0,
+      "tipo": "SIMULACION_INICIO",
+      "descripcion": "Inicio de simulación con 8 procesos",
+      "proceso": null,
+      "particion": null
+    },
+    {
+      "tiempo": 0,
+      "tipo": "PROCESO_ARRIBO",
+      "descripcion": "Proceso P1 arribó al sistema (tamaño: 200)",
+      "proceso": "P1",
+      "particion": null
+    },
+    {
+      "tiempo": 0,
+      "tipo": "SELECCION_PARTICION",
+      "descripcion": "Partición 0 seleccionada para proceso P1 (estrategia: FirstFit)",
+      "proceso": "P1",
+      "particion": 0
+    },
+    {
+      "tiempo": 1,
+      "tipo": "CARGA_INICIO",
+      "descripcion": "Iniciando carga del proceso P1 en partición 0",
+      "proceso": "P1",
+      "particion": 0
+    },
+    {
+      "tiempo": 2,
+      "tipo": "CARGA_COMPLETA",
+      "descripcion": "Proceso P1 cargado en partición 0. Inicio de ejecución",
+      "proceso": "P1",
+      "particion": 0
+    },
+    {
+      "tiempo": 2,
+      "tipo": "PROCESO_ARRIBO",
+      "descripcion": "Proceso P2 arribó al sistema (tamaño: 95)",
+      "proceso": "P2",
+      "particion": null
+    },
+    {
+      "tiempo": 2,
+      "tipo": "SELECCION_PARTICION",
+      "descripcion": "Partición 1 seleccionada para proceso P2 (estrategia: FirstFit)",
+      "proceso": "P2",
+      "particion": 1
+    },
+    {
+      "tiempo": 3,
+      "tipo": "CARGA_INICIO",
+      "descripcion": "Iniciando carga del proceso P2 en partición 1",
+      "proceso": "P2",
+      "particion": 1
+    },
+    {
+      "tiempo": 4,
+      "tipo": "CARGA_COMPLETA",
+      "descripcion": "Proceso P2 cargado en partición 1. Inicio de ejecución",
+      "proceso": "P2",
+      "particion": 1
+    },
+    {
+      "tiempo": 4,
+      "tipo": "PROCESO_ARRIBO",
+      "descripcion": "Proceso P3 arribó al sistema (tamaño: 150)",
+      "proceso": "P3",
+      "particion": null
+    },
+    {
+      "tiempo": 4,
+      "tipo": "SELECCION_PARTICION",
+      "descripcion": "Partición 2 seleccionada para proceso P3 (estrategia: FirstFit)",
+      "proceso": "P3",
+      "particion": 2
+    },
+    {
+      "tiempo": 5,
+      "tipo": "CARGA_INICIO",
+      "descripcion": "Iniciando carga del proceso P3 en partición 2",
+      "proceso": "P3",
+      "particion": 2
+    },
+    {
+      "tiempo": 6,
+      "tipo": "CARGA_COMPLETA",
+      "descripcion": "Proceso P3 cargado en partición 2. Inicio de ejecución",
+      "proceso": "P3",
+      "particion": 2
+    },
+    {
+      "tiempo": 6,
+      "tipo": "PROCESO_ARRIBO",
+      "descripcion": "Proceso P4 arribó al sistema (tamaño: 70)",
+      "proceso": "P4",
+      "particion": null
+    },
+    {
+      "tiempo": 6,
+      "tipo": "PROCESO_RECHAZADO",
+      "descripcion": "No hay partición disponible para proceso P4 (tamaño requerido: 70)",
+      "proceso": "P4",
+      "particion": null
+    },
+    {
+      "tiempo": 7,
+      "tipo": "PROCESO_ARRIBO",
+      "descripcion": "Proceso P4 arribó al sistema (tamaño: 70)",
+      "proceso": "P4",
+      "particion": null
+    },
+    {
+      "tiempo": 7,
+      "tipo": "PROCESO_RECHAZADO",
+      "descripcion": "No hay partición disponible para proceso P4 (tamaño requerido: 70)",
+      "proceso": "P4",
+      "particion": null
+    },
+    {
+      "tiempo": 8,
+      "tipo": "FINALIZACION_INICIO",
+      "descripcion": "Iniciando finalización del proceso P2 en partición 1",
+      "proceso": "P2",
+      "particion": 1
+    },
+    {
+      "tiempo": 9,
+      "tipo": "FINALIZACION_COMPLETA",
+      "descripcion": "Proceso P2 finalizado y liberado de partición 1",
+      "proceso": "P2",
+      "particion": 1
+    },
+    {
+      "tiempo": 9,
+      "tipo": "PROCESO_ARRIBO",
+      "descripcion": "Proceso P4 arribó al sistema (tamaño: 70)",
+      "proceso": "P4",
+      "particion": null
+    },
+    {
+      "tiempo": 9,
+      "tipo": "SELECCION_PARTICION",
+      "descripcion": "Partición 1 seleccionada para proceso P4 (estrategia: FirstFit)",
+      "proceso": "P4",
+      "particion": 1
+    },
+    {
+      "tiempo": 10,
+      "tipo": "CARGA_INICIO",
+      "descripcion": "Iniciando carga del proceso P4 en partición 1",
+      "proceso": "P4",
+      "particion": 1
+    },
+    {
+      "tiempo": 11,
+      "tipo": "CARGA_COMPLETA",
+      "descripcion": "Proceso P4 cargado en partición 1. Inicio de ejecución",
+      "proceso": "P4",
+      "particion": 1
+    },
+    {
+      "tiempo": 11,
+      "tipo": "FINALIZACION_INICIO",
+      "descripcion": "Iniciando finalización del proceso P1 en partición 0",
+      "proceso": "P1",
+      "particion": 0
+    },
+    {
+      "tiempo": 12,
+      "tipo": "FINALIZACION_COMPLETA",
+      "descripcion": "Proceso P1 finalizado y liberado de partición 0",
+      "proceso": "P1",
+      "particion": 0
+    },
+    {
+      "tiempo": 12,
+      "tipo": "FINALIZACION_INICIO",
+      "descripcion": "Iniciando finalización del proceso P3 en partición 2",
+      "proceso": "P3",
+      "particion": 2
+    },
+    {
+      "tiempo": 13,
+      "tipo": "FINALIZACION_COMPLETA",
+      "descripcion": "Proceso P3 finalizado y liberado de partición 2",
+      "proceso": "P3",
+      "particion": 2
+    },
+    {
+      "tiempo": 13,
+      "tipo": "PARTICIONES_UNIDAS",
+      "descripcion": "Particiones [2, 3] unidas en partición 2 (tamaño: 230)",
+      "proceso": null,
+      "particion": 2
+    },
+    {
+      "tiempo": 13,
+      "tipo": "PROCESO_ARRIBO",
+      "descripcion": "Proceso P5 arribó al sistema (tamaño: 180)",
+      "proceso": "P5",
+      "particion": null
+    },
+    {
+      "tiempo": 13,
+      "tipo": "SELECCION_PARTICION",
+      "descripcion": "Partición 0 seleccionada para proceso P5 (estrategia: FirstFit)",
+      "proceso": "P5",
+      "particion": 0
+    },
+    {
+      "tiempo": 14,
+      "tipo": "CARGA_INICIO",
+      "descripcion": "Iniciando carga del proceso P5 en partición 0",
+      "proceso": "P5",
+      "particion": 0
+    },
+    {
+      "tiempo": 15,
+      "tipo": "CARGA_COMPLETA",
+      "descripcion": "Proceso P5 cargado en partición 0. Inicio de ejecución",
+      "proceso": "P5",
+      "particion": 0
+    },
+    {
+      "tiempo": 15,
+      "tipo": "PROCESO_ARRIBO",
+      "descripcion": "Proceso P6 arribó al sistema (tamaño: 120)",
+      "proceso": "P6",
+      "particion": null
+    },
+    {
+      "tiempo": 15,
+      "tipo": "SELECCION_PARTICION",
+      "descripcion": "Partición 2 seleccionada para proceso P6 (estrategia: FirstFit)",
+      "proceso": "P6",
+      "particion": 2
+    },
+    {
+      "tiempo": 16,
+      "tipo": "CARGA_INICIO",
+      "descripcion": "Iniciando carga del proceso P6 en partición 2",
+      "proceso": "P6",
+      "particion": 2
+    },
+    {
+      "tiempo": 17,
+      "tipo": "CARGA_COMPLETA",
+      "descripcion": "Proceso P6 cargado en partición 2. Inicio de ejecución",
+      "proceso": "P6",
+      "particion": 2
+    },
+    {
+      "tiempo": 17,
+      "tipo": "FINALIZACION_INICIO",
+      "descripcion": "Iniciando finalización del proceso P4 en partición 1",
+      "proceso": "P4",
+      "particion": 1
+    },
+    {
+      "tiempo": 18,
+      "tipo": "FINALIZACION_COMPLETA",
+      "descripcion": "Proceso P4 finalizado y liberado de partición 1",
+      "proceso": "P4",
+      "particion": 1
+    },
+    {
+      "tiempo": 18,
+      "tipo": "PARTICIONES_UNIDAS",
+      "descripcion": "Particiones [1] unidas en partición 1 (tamaño: 90)",
+      "proceso": null,
+      "particion": 1
+    },
+    {
+      "tiempo": 18,
+      "tipo": "PROCESO_ARRIBO",
+      "descripcion": "Proceso P7 arribó al sistema (tamaño: 250)",
+      "proceso": "P7",
+      "particion": null
+    },
+    {
+      "tiempo": 18,
+      "tipo": "PROCESO_RECHAZADO",
+      "descripcion": "No hay partición disponible para proceso P7 (tamaño requerido: 250)",
+      "proceso": "P7",
+      "particion": null
+    },
+    {
+      "tiempo": 19,
+      "tipo": "PROCESO_ARRIBO",
+      "descripcion": "Proceso P7 arribó al sistema (tamaño: 250)",
+      "proceso": "P7",
+      "particion": null
+    },
+    {
+      "tiempo": 19,
+      "tipo": "PROCESO_RECHAZADO",
+      "descripcion": "No hay partición disponible para proceso P7 (tamaño requerido: 250)",
+      "proceso": "P7",
+      "particion": null
+    },
+    {
+      "tiempo": 20,
+      "tipo": "FINALIZACION_INICIO",
+      "descripcion": "Iniciando finalización del proceso P6 en partición 2",
+      "proceso": "P6",
+      "particion": 2
+    },
+    {
+      "tiempo": 21,
+      "tipo": "FINALIZACION_COMPLETA",
+      "descripcion": "Proceso P6 finalizado y liberado de partición 2",
+      "proceso": "P6",
+      "particion": 2
+    },
+    {
+      "tiempo": 21,
+      "tipo": "PARTICIONES_UNIDAS",
+      "descripcion": "Particiones [1, 3] unidas en partición 1 (tamaño: 320)",
+      "proceso": null,
+      "particion": 1
+    },
+    {
+      "tiempo": 21,
+      "tipo": "PROCESO_ARRIBO",
+      "descripcion": "Proceso P7 arribó al sistema (tamaño: 250)",
+      "proceso": "P7",
+      "particion": null
+    },
+    {
+      "tiempo": 21,
+      "tipo": "SELECCION_PARTICION",
+      "descripcion": "Partición 1 seleccionada para proceso P7 (estrategia: FirstFit)",
+      "proceso": "P7",
+      "particion": 1
+    },
+    {
+      "tiempo": 22,
+      "tipo": "CARGA_INICIO",
+      "descripcion": "Iniciando carga del proceso P7 en partición 1",
+      "proceso": "P7",
+      "particion": 1
+    },
+    {
+      "tiempo": 23,
+      "tipo": "CARGA_COMPLETA",
+      "descripcion": "Proceso P7 cargado en partición 1. Inicio de ejecución",
+      "proceso": "P7",
+      "particion": 1
+    },
+    {
+      "tiempo": 23,
+      "tipo": "FINALIZACION_INICIO",
+      "descripcion": "Iniciando finalización del proceso P5 en partición 0",
+      "proceso": "P5",
+      "particion": 0
+    },
+    {
+      "tiempo": 24,
+      "tipo": "FINALIZACION_COMPLETA",
+      "descripcion": "Proceso P5 finalizado y liberado de partición 0",
+      "proceso": "P5",
+      "particion": 0
+    },
+    {
+      "tiempo": 24,
+      "tipo": "PROCESO_ARRIBO",
+      "descripcion": "Proceso P8 arribó al sistema (tamaño: 140)",
+      "proceso": "P8",
+      "particion": null
+    },
+    {
+      "tiempo": 24,
+      "tipo": "SELECCION_PARTICION",
+      "descripcion": "Partición 0 seleccionada para proceso P8 (estrategia: FirstFit)",
+      "proceso": "P8",
+      "particion": 0
+    },
+    {
+      "tiempo": 25,
+      "tipo": "CARGA_INICIO",
+      "descripcion": "Iniciando carga del proceso P8 en partición 0",
+      "proceso": "P8",
+      "particion": 0
+    },
+    {
+      "tiempo": 26,
+      "tipo": "CARGA_COMPLETA",
+      "descripcion": "Proceso P8 cargado en partición 0. Inicio de ejecución",
+      "proceso": "P8",
+      "particion": 0
+    },
+    {
+      "tiempo": 29,
+      "tipo": "FINALIZACION_INICIO",
+      "descripcion": "Iniciando finalización del proceso P7 en partición 1",
+      "proceso": "P7",
+      "particion": 1
+    },
+    {
+      "tiempo": 30,
+      "tipo": "FINALIZACION_COMPLETA",
+      "descripcion": "Proceso P7 finalizado y liberado de partición 1",
+      "proceso": "P7",
+      "particion": 1
+    },
+    {
+      "tiempo": 30,
+      "tipo": "PARTICIONES_UNIDAS",
+      "descripcion": "Particiones [1, 2] unidas en partición 1 (tamaño: 360)",
+      "proceso": null,
+      "particion": 1
+    },
+    {
+      "tiempo": 31,
+      "tipo": "FINALIZACION_INICIO",
+      "descripcion": "Iniciando finalización del proceso P8 en partición 0",
+      "proceso": "P8",
+      "particion": 0
+    },
+    {
+      "tiempo": 32,
+      "tipo": "FINALIZACION_COMPLETA",
+      "descripcion": "Proceso P8 finalizado y liberado de partición 0",
+      "proceso": "P8",
+      "particion": 0
+    },
+    {
+      "tiempo": 32,
+      "tipo": "PARTICIONES_UNIDAS",
+      "descripcion": "Particiones [1] unidas en partición 0 (tamaño: 500)",
+      "proceso": null,
+      "particion": 0
+    },
+    {
+      "tiempo": 33,
+      "tipo": "SIMULACION_FIN",
+      "descripcion": "Simulación completada. Tiempo total: 33. Procesos finalizados: 8. TMR: 14.38",
+      "proceso": null,
+      "particion": null
+    }
+  ],
+  "estados_particiones": [
+    {
+      "tiempo": 0,
+      "motivo": "Inicialización del sistema",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 499,
+          "tamano": 500,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 0,
+      "motivo": "Partición creada/asignada para proceso P1",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 199,
+          "tamano": 200,
+          "estado": "libre",
+          "proceso": "P1",
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 499,
+          "tamano": 300,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 2,
+      "motivo": "Proceso P1 en ejecución en partición 0",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 199,
+          "tamano": 200,
+          "estado": "ocupado",
+          "proceso": "P1",
+          "tiempo_liberacion": 10
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 499,
+          "tamano": 300,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 2,
+      "motivo": "Partición creada/asignada para proceso P2",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 199,
+          "tamano": 200,
+          "estado": "ocupado",
+          "proceso": "P1",
+          "tiempo_liberacion": 10
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 294,
+          "tamano": 95,
+          "estado": "libre",
+          "proceso": "P2",
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 295,
+          "direccion_fin": 499,
+          "tamano": 205,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 4,
+      "motivo": "Proceso P2 en ejecución en partición 1",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 199,
+          "tamano": 200,
+          "estado": "ocupado",
+          "proceso": "P1",
+          "tiempo_liberacion": 10
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 294,
+          "tamano": 95,
+          "estado": "ocupado",
+          "proceso": "P2",
+          "tiempo_liberacion": 8
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 295,
+          "direccion_fin": 499,
+          "tamano": 205,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 4,
+      "motivo": "Partición creada/asignada para proceso P3",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 199,
+          "tamano": 200,
+          "estado": "ocupado",
+          "proceso": "P1",
+          "tiempo_liberacion": 10
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 294,
+          "tamano": 95,
+          "estado": "ocupado",
+          "proceso": "P2",
+          "tiempo_liberacion": 8
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 295,
+          "direccion_fin": 444,
+          "tamano": 150,
+          "estado": "libre",
+          "proceso": "P3",
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 3,
+          "direccion_inicio": 445,
+          "direccion_fin": 499,
+          "tamano": 55,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 6,
+      "motivo": "Proceso P3 en ejecución en partición 2",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 199,
+          "tamano": 200,
+          "estado": "ocupado",
+          "proceso": "P1",
+          "tiempo_liberacion": 10
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 294,
+          "tamano": 95,
+          "estado": "ocupado",
+          "proceso": "P2",
+          "tiempo_liberacion": 8
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 295,
+          "direccion_fin": 444,
+          "tamano": 150,
+          "estado": "ocupado",
+          "proceso": "P3",
+          "tiempo_liberacion": 11
+        },
+        {
+          "id": 3,
+          "direccion_inicio": 445,
+          "direccion_fin": 499,
+          "tamano": 55,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 9,
+      "motivo": "Liberación de partición 1 tras finalizar proceso P2",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 199,
+          "tamano": 200,
+          "estado": "ocupado",
+          "proceso": "P1",
+          "tiempo_liberacion": 10
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 294,
+          "tamano": 95,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 295,
+          "direccion_fin": 444,
+          "tamano": 150,
+          "estado": "ocupado",
+          "proceso": "P3",
+          "tiempo_liberacion": 11
+        },
+        {
+          "id": 3,
+          "direccion_inicio": 445,
+          "direccion_fin": 499,
+          "tamano": 55,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 9,
+      "motivo": "Partición creada/asignada para proceso P4",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 199,
+          "tamano": 200,
+          "estado": "ocupado",
+          "proceso": "P1",
+          "tiempo_liberacion": 10
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 269,
+          "tamano": 70,
+          "estado": "libre",
+          "proceso": "P4",
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 270,
+          "direccion_fin": 294,
+          "tamano": 25,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 295,
+          "direccion_fin": 444,
+          "tamano": 150,
+          "estado": "ocupado",
+          "proceso": "P3",
+          "tiempo_liberacion": 11
+        },
+        {
+          "id": 3,
+          "direccion_inicio": 445,
+          "direccion_fin": 499,
+          "tamano": 55,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 11,
+      "motivo": "Proceso P4 en ejecución en partición 1",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 199,
+          "tamano": 200,
+          "estado": "ocupado",
+          "proceso": "P1",
+          "tiempo_liberacion": 10
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 269,
+          "tamano": 70,
+          "estado": "ocupado",
+          "proceso": "P4",
+          "tiempo_liberacion": 17
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 270,
+          "direccion_fin": 294,
+          "tamano": 25,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 295,
+          "direccion_fin": 444,
+          "tamano": 150,
+          "estado": "ocupado",
+          "proceso": "P3",
+          "tiempo_liberacion": 11
+        },
+        {
+          "id": 3,
+          "direccion_inicio": 445,
+          "direccion_fin": 499,
+          "tamano": 55,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 12,
+      "motivo": "Liberación de partición 0 tras finalizar proceso P1",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 199,
+          "tamano": 200,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 269,
+          "tamano": 70,
+          "estado": "ocupado",
+          "proceso": "P4",
+          "tiempo_liberacion": 17
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 270,
+          "direccion_fin": 294,
+          "tamano": 25,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 295,
+          "direccion_fin": 444,
+          "tamano": 150,
+          "estado": "ocupado",
+          "proceso": "P3",
+          "tiempo_liberacion": 11
+        },
+        {
+          "id": 3,
+          "direccion_inicio": 445,
+          "direccion_fin": 499,
+          "tamano": 55,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 13,
+      "motivo": "Liberación de partición 2 tras finalizar proceso P3",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 199,
+          "tamano": 200,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 269,
+          "tamano": 70,
+          "estado": "ocupado",
+          "proceso": "P4",
+          "tiempo_liberacion": 17
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 270,
+          "direccion_fin": 294,
+          "tamano": 25,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 295,
+          "direccion_fin": 444,
+          "tamano": 150,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 3,
+          "direccion_inicio": 445,
+          "direccion_fin": 499,
+          "tamano": 55,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 13,
+      "motivo": "Unión de particiones libres en partición 2",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 199,
+          "tamano": 200,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 269,
+          "tamano": 70,
+          "estado": "ocupado",
+          "proceso": "P4",
+          "tiempo_liberacion": 17
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 270,
+          "direccion_fin": 499,
+          "tamano": 230,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 13,
+      "motivo": "Partición creada/asignada para proceso P5",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 179,
+          "tamano": 180,
+          "estado": "libre",
+          "proceso": "P5",
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 199,
+          "tamano": 20,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 269,
+          "tamano": 70,
+          "estado": "ocupado",
+          "proceso": "P4",
+          "tiempo_liberacion": 17
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 270,
+          "direccion_fin": 499,
+          "tamano": 230,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 15,
+      "motivo": "Proceso P5 en ejecución en partición 0",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 179,
+          "tamano": 180,
+          "estado": "ocupado",
+          "proceso": "P5",
+          "tiempo_liberacion": 22
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 199,
+          "tamano": 20,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 269,
+          "tamano": 70,
+          "estado": "ocupado",
+          "proceso": "P4",
+          "tiempo_liberacion": 17
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 270,
+          "direccion_fin": 499,
+          "tamano": 230,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 15,
+      "motivo": "Partición creada/asignada para proceso P6",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 179,
+          "tamano": 180,
+          "estado": "ocupado",
+          "proceso": "P5",
+          "tiempo_liberacion": 22
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 199,
+          "tamano": 20,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 269,
+          "tamano": 70,
+          "estado": "ocupado",
+          "proceso": "P4",
+          "tiempo_liberacion": 17
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 270,
+          "direccion_fin": 389,
+          "tamano": 120,
+          "estado": "libre",
+          "proceso": "P6",
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 3,
+          "direccion_inicio": 390,
+          "direccion_fin": 499,
+          "tamano": 110,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 17,
+      "motivo": "Proceso P6 en ejecución en partición 2",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 179,
+          "tamano": 180,
+          "estado": "ocupado",
+          "proceso": "P5",
+          "tiempo_liberacion": 22
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 199,
+          "tamano": 20,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 269,
+          "tamano": 70,
+          "estado": "ocupado",
+          "proceso": "P4",
+          "tiempo_liberacion": 17
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 270,
+          "direccion_fin": 389,
+          "tamano": 120,
+          "estado": "ocupado",
+          "proceso": "P6",
+          "tiempo_liberacion": 20
+        },
+        {
+          "id": 3,
+          "direccion_inicio": 390,
+          "direccion_fin": 499,
+          "tamano": 110,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 18,
+      "motivo": "Liberación de partición 1 tras finalizar proceso P4",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 179,
+          "tamano": 180,
+          "estado": "ocupado",
+          "proceso": "P5",
+          "tiempo_liberacion": 22
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 199,
+          "tamano": 20,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 200,
+          "direccion_fin": 269,
+          "tamano": 70,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 270,
+          "direccion_fin": 389,
+          "tamano": 120,
+          "estado": "ocupado",
+          "proceso": "P6",
+          "tiempo_liberacion": 20
+        },
+        {
+          "id": 3,
+          "direccion_inicio": 390,
+          "direccion_fin": 499,
+          "tamano": 110,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 18,
+      "motivo": "Unión de particiones libres en partición 1",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 179,
+          "tamano": 180,
+          "estado": "ocupado",
+          "proceso": "P5",
+          "tiempo_liberacion": 22
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 269,
+          "tamano": 90,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 270,
+          "direccion_fin": 389,
+          "tamano": 120,
+          "estado": "ocupado",
+          "proceso": "P6",
+          "tiempo_liberacion": 20
+        },
+        {
+          "id": 3,
+          "direccion_inicio": 390,
+          "direccion_fin": 499,
+          "tamano": 110,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 21,
+      "motivo": "Liberación de partición 2 tras finalizar proceso P6",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 179,
+          "tamano": 180,
+          "estado": "ocupado",
+          "proceso": "P5",
+          "tiempo_liberacion": 22
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 269,
+          "tamano": 90,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 270,
+          "direccion_fin": 389,
+          "tamano": 120,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 3,
+          "direccion_inicio": 390,
+          "direccion_fin": 499,
+          "tamano": 110,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 21,
+      "motivo": "Unión de particiones libres en partición 1",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 179,
+          "tamano": 180,
+          "estado": "ocupado",
+          "proceso": "P5",
+          "tiempo_liberacion": 22
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 499,
+          "tamano": 320,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 21,
+      "motivo": "Partición creada/asignada para proceso P7",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 179,
+          "tamano": 180,
+          "estado": "ocupado",
+          "proceso": "P5",
+          "tiempo_liberacion": 22
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 429,
+          "tamano": 250,
+          "estado": "libre",
+          "proceso": "P7",
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 430,
+          "direccion_fin": 499,
+          "tamano": 70,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 23,
+      "motivo": "Proceso P7 en ejecución en partición 1",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 179,
+          "tamano": 180,
+          "estado": "ocupado",
+          "proceso": "P5",
+          "tiempo_liberacion": 22
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 429,
+          "tamano": 250,
+          "estado": "ocupado",
+          "proceso": "P7",
+          "tiempo_liberacion": 29
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 430,
+          "direccion_fin": 499,
+          "tamano": 70,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 24,
+      "motivo": "Liberación de partición 0 tras finalizar proceso P5",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 179,
+          "tamano": 180,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 429,
+          "tamano": 250,
+          "estado": "ocupado",
+          "proceso": "P7",
+          "tiempo_liberacion": 29
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 430,
+          "direccion_fin": 499,
+          "tamano": 70,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 24,
+      "motivo": "Partición creada/asignada para proceso P8",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 139,
+          "tamano": 140,
+          "estado": "libre",
+          "proceso": "P8",
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 140,
+          "direccion_fin": 179,
+          "tamano": 40,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 429,
+          "tamano": 250,
+          "estado": "ocupado",
+          "proceso": "P7",
+          "tiempo_liberacion": 29
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 430,
+          "direccion_fin": 499,
+          "tamano": 70,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 26,
+      "motivo": "Proceso P8 en ejecución en partición 0",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 139,
+          "tamano": 140,
+          "estado": "ocupado",
+          "proceso": "P8",
+          "tiempo_liberacion": 31
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 140,
+          "direccion_fin": 179,
+          "tamano": 40,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 429,
+          "tamano": 250,
+          "estado": "ocupado",
+          "proceso": "P7",
+          "tiempo_liberacion": 29
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 430,
+          "direccion_fin": 499,
+          "tamano": 70,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 30,
+      "motivo": "Liberación de partición 1 tras finalizar proceso P7",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 139,
+          "tamano": 140,
+          "estado": "ocupado",
+          "proceso": "P8",
+          "tiempo_liberacion": 31
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 140,
+          "direccion_fin": 179,
+          "tamano": 40,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 180,
+          "direccion_fin": 429,
+          "tamano": 250,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 2,
+          "direccion_inicio": 430,
+          "direccion_fin": 499,
+          "tamano": 70,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 30,
+      "motivo": "Unión de particiones libres en partición 1",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 139,
+          "tamano": 140,
+          "estado": "ocupado",
+          "proceso": "P8",
+          "tiempo_liberacion": 31
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 140,
+          "direccion_fin": 499,
+          "tamano": 360,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 32,
+      "motivo": "Liberación de partición 0 tras finalizar proceso P8",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 139,
+          "tamano": 140,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        },
+        {
+          "id": 1,
+          "direccion_inicio": 140,
+          "direccion_fin": 499,
+          "tamano": 360,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    },
+    {
+      "tiempo": 32,
+      "motivo": "Unión de particiones libres en partición 0",
+      "particiones": [
+        {
+          "id": 0,
+          "direccion_inicio": 0,
+          "direccion_fin": 499,
+          "tamano": 500,
+          "estado": "libre",
+          "proceso": null,
+          "tiempo_liberacion": null
+        }
+      ]
+    }
+  ],
+  "estadisticas": {
+    "tiempo_total": 33,
+    "procesos_terminados": 8,
+    "fragmentacion_total": 7480
+  }
+}

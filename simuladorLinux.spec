@@ -4,7 +4,7 @@
 a = Analysis(
     ['interfaz_gui.py'],
     pathex=[],
-    binaries=[],
+    binaries=[('/usr/lib/x86_64-linux-gnu/libtk8.6.so', '.'), ('/usr/lib/x86_64-linux-gnu/libtcl8.6.so', '.')],
     datas=[],
     hiddenimports=['PIL._tkinter_finder'],
     hookspath=[],

@@ -444,10 +444,25 @@ class Memoria:
             if particion.proceso is not None:
                 print(particion.proceso.nombre)
 
+    def calcularTiempoMedioRetorno(self):
+        """
+        Calcula el Tiempo Medio de Retorno de la tanda de procesos.
+        Tiempo de Retorno = Tiempo de Finalización - Tiempo de Arribo
+        Tiempo Medio de Retorno = Suma de Tiempos de Retorno / Cantidad de Procesos
+        """
+        suma_tiempos_retorno = sum(proceso.tiempoDeFinalizacion - proceso.arribo for proceso in self.procesosTerminados)
+        self.tiempo_medio_retorno = suma_tiempos_retorno / len(self.procesosTerminados) if self.procesosTerminados else 0
+        
+        print("\n" + "="*80)
+        print(f"TIEMPO MEDIO DE RETORNO: {self.tiempo_medio_retorno:.2f}")
+        print("="*80 + "\n")
+        
+        return self.tiempo_medio_retorno
+
+
     def simulacion(self):
         fin = len(self.procesos)
         
-        # NUEVO: Registrar inicio de simulación
         self.registrarEvento(
             "SIMULACION_INICIO",
             f"Inicio de simulación con {fin} procesos"
@@ -465,12 +480,10 @@ class Memoria:
                 self.tiempo += 1
             self.imprimir()
         
-        # NUEVO: Registrar fin de simulación
+        tmr = self.calcularTiempoMedioRetorno()
         self.registrarEvento(
             "SIMULACION_FIN",
-            f"Simulación completada. Tiempo total: {self.tiempo}. Procesos finalizados: {len(self.procesosTerminados)}"
+            f"Simulación completada. Tiempo total: {self.tiempo}. Procesos finalizados: {len(self.procesosTerminados)}. TMR: {tmr:.2f}"
         )
 
         self.guardarRegistros()
-   
-

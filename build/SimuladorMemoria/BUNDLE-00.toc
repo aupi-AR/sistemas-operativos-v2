@@ -1,0 +1,4 @@
+([('SimuladorMemoria',
+   '/Users/aldanabiondi/Documents/Pablo '
+   'Donato/UNIVERSIDAD/TULI/sistemas-operativos-v2/dist/SimuladorMemoria',
+   'EXECUTABLE')],)
